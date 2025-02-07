@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head><title>Order List</title></head>
+<body>
+    <h1>Order List</h1>
+    {% for order in orders %}
+        <p>{{ order.quantity }} x {{ order.item.name }} - ${{ order.total_price }}</p>
+    {% endfor %}
+    <a href="{% url 'home' %}">Home</a>
+</body>
+</html>
